@@ -1,46 +1,4 @@
-import ReactMarkdown from "react-markdown";
-import type { Components } from "react-markdown";
-import README from "../../README.md?raw";
 
-const mdComponents: Partial<Components> = {
-  pre(props: any) {
-    return (
-      <pre
-        {...props}
-        className={[
-          "whitespace-pre-wrap",            // wrap on small screens
-          "break-words",                    // break long tokens
-          "overflow-x-auto",                // allow horizontal scroll if truly needed
-          "text-xs sm:text-sm md:text-base",// responsive font size
-          "leading-6",
-          "bg-neutral-50 dark:bg-neutral-900",
-          "p-4 sm:p-6",
-          "rounded-lg",
-          "border border-black/10 dark:border-white/10",
-          props.className || "",
-        ].join(" ")}
-      />
-    );
-  },
-  code(props: any) {
-    const { inline, className, children, ...rest } = props;
-    if (inline) {
-      return (
-        <code
-          {...rest}
-          className={["whitespace-pre-wrap break-words", className || ""].join(" ")}
-        >
-          {children}
-        </code>
-      );
-    }
-    return (
-      <code {...rest} className={className}>
-        {children}
-      </code>
-    );
-  },
-};
 
 export function WhyPage() {
   const pillars = [
@@ -69,18 +27,7 @@ export function WhyPage() {
         </div>
       </section>
 
-      <section className="px-4 sm:px-6 lg:px-12 py-12 sm:py-16 border-t border-black/10 dark:border-white/10">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6 sm:mb-8">
-            From our README
-          </h2>
-          <div className="mx-auto max-w-full sm:max-w-3xl md:max-w-4xl text-left">
-            <div className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl dark:prose-invert max-w-none">
-              <ReactMarkdown components={mdComponents}>{README}</ReactMarkdown>
-            </div>
-          </div>
-        </div>
-      </section>
+
     </main>
   );
 }

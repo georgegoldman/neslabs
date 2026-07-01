@@ -1,27 +1,3 @@
-                               NESLABS — ENGINE HOUSE
+# NESLABS — ENGINE HOUSE
 
-                        ╱╲────────────────────────────────────────╱╲
-                       ╱  ╲                                      ╱  ╲
-                      ╱    ╲────────────────────────────────────╱    ╲
-                     ╲──────╱                                  ╲──────╱
-
-           ┌──────────────────────────────────────────────────────────────────┐
-           │  INGRESS BUS            CONTROL DECK               OBSERVABILITY │
-           │  ───────────            ───────────                ───────────── │
-           │  API ▸▸▸ gRPC           toggles • dials            logs • metrics│
-           ├───────────────┬───────────────────────────────┬──────────────────┤
-           │  CRYPTO BAY    │   AI CORE (NEURAL ENGINE)    │   SECURITY GATE  │
-           │  ─────────     │   ───────────────────────    │   ─────────────  │
-           │  ▣ Vault       │   [██]──▶[██]──▶[██]──▶[██]  │   ⛨ WAF / ACL    │
-           │  ▣ Hashes      │    ▲      │      │     │     │   ⛨ Rate Limit   │
-           │  ▣ Keys/Sign   │   Noise  Attn   Loss  Out    │   ⛨ Sign & Verify│
-           ├───────┬────────┴───────────────┬──────────────┴───────┬──────────┤
-           │       │    FEATURE MIXER       │   ORCHESTRATOR        │ STORAGE  │
-           │       │    ─────────────       │   ───────────         │ ───────  │
-           │       └──►  ║ ║ ║  +  ║ ║  ────┼──▶ state ▸ jobs ▸     │ Blob / DB│
-           │              └──────┬───────┘  │   retries • queues    │ Snapshots│
-           │                     ▼           │                       │ Backups  │
-           │               SIGNAL BUS  ──────┴───────────────────────┘         │
-           ├───────────────────────────────────────────────────────────────────┤
-           │                 OUTPUTS ▸ webhooks ▸ sdk ▸ cli ▸ ui               │
-           └───────────────────────────────────────────────────────────────────┘
+An integrated on-chain stack for builders and enterprises.
