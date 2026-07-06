@@ -10,7 +10,7 @@ type LayoutProps = {
 
 export function Layout({ page, setPage, children }: LayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-black dark:bg-black dark:text-white">
+    <div className="flex flex-col min-h-screen bg-black text-white w-full">
       <Header page={page} setPage={setPage} />
       {children}
       <Footer page={page} />
