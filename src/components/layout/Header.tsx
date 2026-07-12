@@ -33,6 +33,14 @@ export function Header({ page, setPage }: HeaderProps) {
               </span>
             </button>
           ))}
+          <a 
+            href="https://slides.neslabs.io/" 
+            className="relative py-2 group text-white"
+          >
+            <span className="relative z-10 group-hover:text-brand-light transition-colors">
+              slides
+            </span>
+          </a>
         </nav>
 
         <div className="flex items-center gap-4 lg:gap-6">
@@ -55,7 +63,8 @@ export function Header({ page, setPage }: HeaderProps) {
         <div className="lg:hidden absolute top-full left-0 w-full bg-black border-b border-neutral-70 px-6 py-4 flex flex-col gap-4 font-mono uppercase text-sm">
           <button onClick={() => { setPage("projects"); setMenuOpen(false); }} className="text-left text-white hover:text-brand-light py-2 border-b border-neutral-80">projects</button>
           <button onClick={() => { setPage("why"); setMenuOpen(false); }} className="text-left text-white hover:text-brand-light py-2 border-b border-neutral-80">why neslabs</button>
-          <button onClick={() => { setPage("contact"); setMenuOpen(false); }} className="text-left text-white hover:text-brand-light py-2">contact</button>
+          <button onClick={() => { setPage("contact"); setMenuOpen(false); }} className="text-left text-white hover:text-brand-light py-2 border-b border-neutral-80">contact</button>
+          <a href="https://slides.neslabs.io/" className="text-left text-white hover:text-brand-light py-2">slides</a>
         </div>
       )}
       
