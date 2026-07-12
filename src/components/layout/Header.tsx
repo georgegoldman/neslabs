@@ -35,6 +35,8 @@ export function Header({ page, setPage }: HeaderProps) {
           ))}
           <a 
             href="https://slides.neslabs.io/" 
+            target="_blank" 
+            rel="noopener noreferrer"
             className="relative py-2 group text-white"
           >
             <span className="relative z-10 group-hover:text-brand-light transition-colors">
@@ -64,7 +66,7 @@ export function Header({ page, setPage }: HeaderProps) {
           <button onClick={() => { setPage("projects"); setMenuOpen(false); }} className="text-left text-white hover:text-brand-light py-2 border-b border-neutral-80">projects</button>
           <button onClick={() => { setPage("why"); setMenuOpen(false); }} className="text-left text-white hover:text-brand-light py-2 border-b border-neutral-80">why neslabs</button>
           <button onClick={() => { setPage("contact"); setMenuOpen(false); }} className="text-left text-white hover:text-brand-light py-2 border-b border-neutral-80">contact</button>
-          <a href="https://slides.neslabs.io/" className="text-left text-white hover:text-brand-light py-2">slides</a>
+          <a href="https://slides.neslabs.io/" target="_blank" rel="noopener noreferrer" className="text-left text-white hover:text-brand-light py-2">slides</a>
         </div>
       )}
       
